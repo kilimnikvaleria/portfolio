@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Valeria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
+</head>
+<body>
+    <script src="js/svg4everybody.js" type="text/javascript"></script>
+    <script>svg4everybody();</script>
+
+    <header class="header">
+        <nav class="main-nav">
+            <input type="checkbox" id="main-nav__toggle" hidden>
+            <label for="main-nav__toggle" class="main-nav__toggle" onclick></label>
+            <ul class="main-nav__items">
+                <li class="main-nav__item"><a href="#about" class="main-nav__link">обо мне</a></li>
+                <li class="main-nav__item"><a href="#skills" class="main-nav__link">навыки</a></li>
+                <li class="main-nav__item"><a href="#education" class="main-nav__link">образование</a></li>
+                <li class="main-nav__item"><a href="#portfolio" class="main-nav__link">портфолио</a></li>
+                <li class="main-nav__item"><a href="#contacts" class="main-nav__link">контакты</a></li>
+            </ul>
+        </nav>
+        <picture>
+           <!-- <source media="(min-width:1150px)" srcset="images/logo-desktop.svg">-->
+            <source media="(min-width:768px)" srcset="images/logo-tablet.png">
+            <img class="header__logo-image" src="images/logo/logo-mobile.png" alt="Valeria" width="202" height="122">
+        </picture>
+        <p class="header__title">frontend-разработчик <i class="header__title header__title--dop">/</i> <br>html-верстальщик</p>
+    </header>
+    <a href="#" class="visually-hidden" id="about"></a>
+    <section class="about">
+        <h1 class="about__title title">
+            <i class="title__icon title__icon--about">
+                <svg  class="icon-about" width="32px" height="32px">
+                    <use xlink:href="images/sprite.svg#profile-information"></use>
+                </svg>
+            </i>
+            обо мне
+        </h1>
+        <picture>
+            <source media="(min-width:1200px)" srcset="images/about__photo-desktop1_1.jpg">
+            <source media="(min-width:768px)" srcset="images/about__photo-tablet1.jpg">
+            <img src="images/about__photo1.jpg" class="about__photo-image" alt="Valeria">
+        </picture>
+        <p class="about__text">Я - начинающий frontend-разработчик.
+            Владею HTML5/CSS3 и JavaScript. В процессе разработки я уделяю внимание
+            не только максимальному соответствию макету, но и семантичности, доступности, гибкости вёрстки.
+            <br>
+            <br>
+            Умею верстать адаптивно и кроссбраузерно, соблюдая законы валидной разметки W3C.
+
+            <span class="text__dop">Стремлюсь развиваться как разработчик в целом и особенно в качестве Javascript-программиста.</span>
+        </p>
+    </section>
+    <section class="skills" id="skills">
+        <h1 class="skills__title title">
+            <i class="title__icon title__icon--skills">
+                <svg  class="icon-skills" width="32px" height="32px">
+                    <use xlink:href="images/sprite.svg#settings-work-tool"></use>
+                </svg>
+            </i>
+            навыки
+        </h1>
+        <ul class="skills__items">
+            <li class="skills__item">HTML/HTML 5</li>
+            <li class="skills__item">css/ css3</li>
+            <li class="skills__item">sass/less</li>
+            <li class="skills__item">gulp/grunt</li>
+            <li class="skills__item">методология БЭМ</li>
+            <li class="skills__item">адаптивность</li>
+            <li class="skills__item">кросбраузерность</li>
+            <li class="skills__item">работа с GIT</li>
+            <li class="skills__item">adobe<br> photoshop</li>
+            <li class="skills__item">БАЗОВЫЕ ЗНАНИЯ <br> JAVA SCRIPT</li>
+        </ul>
+    </section>
+    <section class="education" id="education">
+        <h1 class="education__title title">
+            <i class="title__icon title__icon--education">
+                <svg  class="icon-education" width="32px" height="32px">
+                    <use xlink:href="images/sprite.svg#students-cap"></use>
+                </svg>
+            </i>
+            образование
+        </h1>
+        <article class="education__item education__item--higher">
+            <h2 class="education__subtitle education__subtitle--higher">высшее</h2>
+            <p class="education__text">Санкт-Петербургский политехнический университет Петра Великого(СПБПУ),
+                2016г., институт прикладной математики и механики, направление подготовки
+                „информатика и вычислительная техника“, бакалавр</p>
+        </article>
+        <article class="education__item">
+            <h2 class="education__subtitle education__subtitle--courses">курсы</h2>
+            <p class="education__text">Санкт-Петербургская школа телевидения, 2016г.,  курс „Веб-дизайн“:
+                <br>*графический дизайн
+                <br>*веб-дизайн
+                <br>*основы верстки
+            </p>
+        </article>
+        <article class="education__item education__item--self-education">
+            <h2 class="education__subtitle education__subtitle--self-education">самообразование</h2>
+            <p class="education__text">Курсы в интернете, видеокурсы,
+                книги, документация, форумы, статьи.
+                <br><br>
+                В настоящее время совершенствую свои знания и приминяю их на практике</p>
+        </article>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h1 class="portfolio__title title">
+            <i class="title__icon title__icon--portfolio">
+                <svg  class="icon-portfolio" width="32px" height="32px">
+                    <use xlink:href="images/sprite.svg#portfolio"></use>
+                </svg>
+            </i>
+            портфолио
+        </h1>
+        <div class="portfolio__wrapper">
+            <article class="portfolio__project">
+                <picture>
+                    <source media="(min-width:768px)" srcset="images/barbershop-tablet.jpg">
+                    <img src="images/portfolio_barbershop.jpg" class="project__image" alt="barbershop" width="290" height="174">
+                </picture>
+                <div class="project__info">
+                    <h2 class="info__title">Барбершоп</h2>
+                    <p class="info__text">Личный проект интенсива "Продвинутый<br>
+                        HTML/CSS" от HTML Академии</p>
+                    <div class="info__button">
+                        <a href="https://github.com/kilimnikvaleria/barbershop" target="_blank" class="info__link">исходник</a>
+                        <a class="info__link">просмотр</a>
+                    </div>
+                </div>
+                <h2 class="project__title">БАРБЕРШОП БОРОДИНСКИ</h2>
+            </article>
+            <article class="portfolio__project">
+                <picture>
+                    <source media="(min-width:768px)" srcset="images/portfolio_mishka-tablet.jpg">
+                    <img src="images/portfolio_mishka.jpg" class="project__image" alt="mishka" width="290" height="174">
+                </picture>
+                <div class="project__info">
+                    <h2 class="info__title">Мишка</h2>
+                    <p class="info__text">Личный проект интенсива "Продвинутый<br>
+                        HTML/CSS" от HTML Академии</p>
+                    <div class="info__button">
+                        <a href="https://github.com/kilimnikvaleria/mishka" target="_blank" class="info__link">исходник</a>
+                        <a class="info__link">просмотр</a>
+                    </div>
+                </div>
+                <h2 class="project__title">Интернет-магазин
+                    вещей ручной работы</h2>
+            </article>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <h1 class="contacts__title">контактная информация</h1>
+        <a href="tel:+79811801209" class="contacts__link contacts__link--tel">
+            +7 (981) 180-12-09
+        </a>
+        <a href="mailto:kilimnikvaleria@gmail.com" class="contacts__link contacts__link--mail">kilimnikvaleria@gmail.com</a>
+        <a href="skype:kilimnik__valeria" target="_blank" class="contacts__link contacts__link--vk">kilimnik__valeria</a>
+    </section>
+    <footer class="footer">
+        <a href="https://vk.com/kilimnik__valeria" target="_blank" class="footer__link footer__link--vk">
+            <svg  class="link__icon link__icon--vk" width="32px" height="32px">
+                <use xlink:href="images/sprite.svg#vk"></use>
+            </svg>
+        </a>
+        <a href="https://t.me/kilimnik_valeria" target="_blank" class="footer__link footer__link--telegram">
+            <svg  class="link__icon link__icon--telegram" width="32px" height="32px">
+                <use xlink:href="images/sprite.svg#telegram"></use>
+            </svg>
+        </a>
+        <a href="https://github.com/kilimnikvaleria" target="_blank" class="footer__link footer__link--git">
+            <svg  class="link__icon link__icon--git" width="32px" height="32px">
+                <use xlink:href="images/sprite.svg#github"></use>
+            </svg>
+        </a>
+        <p class="footer__text">© 2018       kilimnikvaleria</p>
+    </footer>
+</body>
+</html>

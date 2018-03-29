@@ -1,0 +1,251 @@
+.header{
+ //@include container();
+  width: 360px;
+  margin: 0 auto;
+  background-image: url("../images/header__bg.jpg");
+  background-repeat: no-repeat;
+  background-position: -850px 0px;
+  padding-bottom: 30px;
+}
+
+.main-nav{
+  background-color: black;
+  position: relative;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  background-image: url("../images/icon-menu-open.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#main-nav__toggle:checked ~ .main-nav__items .main-nav__item {
+  display: block;
+}
+
+#main-nav__toggle:checked ~ .main-nav__items .main-nav__item:hover{
+  background-color: white;
+}
+
+#main-nav__toggle:checked ~ .main-nav__items .main-nav__item .main-nav__link{
+ // font-size: 12px;
+  color: white;
+}
+
+#main-nav__toggle:checked ~ .main-nav__items .main-nav__item .main-nav__link:hover{
+  color: black;
+}
+
+#main-nav__toggle:checked ~ .main-nav__toggle {
+  background-image: url("../images/icon-menu-close.svg");
+}
+
+.main-nav__items{
+  @include list-reset();
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__item{
+  border-top: 1px solid white;
+  display: none;
+
+  &:first-child{
+    display: block;
+    border: none;
+  }
+}
+
+.main-nav__link{
+  display: block;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+
+  &:hover{
+    color: black;
+    font-weight: 700;
+  }
+}
+
+.header__logo-image{
+  width: 130px;
+  height: 79px;
+  display: block;
+  margin: 40px auto 30px auto;
+}
+
+.header__title{
+  margin: 0;
+  font-size: 12px;
+  line-height: 30px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 700;
+
+  &--dop{
+    display: none;
+  }
+}
+
+@include breakpoint(tablet){
+
+  .header{
+    width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+    background-position: -500px 40px;
+  }
+
+  .main-nav__toggle{
+    display: none;
+  }
+
+  .main-nav__items{
+    @include container();
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .main-nav__item{
+    flex-grow: 1;
+    display: block;
+    border: none;
+    position: relative;
+
+    &:hover{
+      background-color: white;
+      box-shadow: 1px 0 white;
+
+      &:nth-child(2){
+        max-width: 131.797px;
+      }
+
+      &:nth-child(3){
+        max-width: 183.531px;
+      }
+
+      &:nth-child(4){
+        max-width: 165.938px;
+      }
+
+      &:nth-child(5){
+        max-width: 148.875px;
+      }
+    }
+
+    &:after{
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 1px;
+      height: 20px;
+      background-color: white;
+    }
+
+    &:first-child{
+      &:after{
+        display: none;
+      }
+    }
+  }
+
+  .main-nav__link{
+      color: white;
+  }
+
+  .header__logo-image{
+    margin: 80px auto 90px auto;
+    width: 230px;
+    height: 100px;
+  }
+
+  .header__title{
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+}
+
+@include breakpoint(desktop){
+  .header{
+    background-position: -400px 60px;
+    padding-bottom: 210px;
+  }
+
+  .main-nav__item{
+    &:after{
+      top: 15px;
+      left: 0;
+      width: 1px;
+      height: 30px;
+      background-color: white;
+    }
+
+    &:hover{
+      &:nth-child(2){
+        max-width: 211.297px;
+      }
+
+      &:nth-child(3){
+        max-width: 269.969px;
+      }
+
+      &:nth-child(4){
+        max-width: 250.125px;
+      }
+
+      &:nth-child(5){
+        max-width: 230.563px;
+      }
+    }
+  }
+
+  .main-nav__link{
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  .header__logo-image{
+    margin: 120px auto 130px auto;
+  }
+
+  .header br{
+    display: none;
+  }
+
+  .header__title{
+    font-size: 27px;
+    letter-spacing: 7px;
+
+    &--dop{
+      display: inline;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+
+  .header{
+    background-position: 0 0;
+  }
+
+}

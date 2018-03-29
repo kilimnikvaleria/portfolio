@@ -1,0 +1,109 @@
+.skills{
+  width: 100%;
+  max-width: 1900px;
+  background-image: url("../images/skills__bg.jpg");
+  background-position: -800px -90px;
+  background-repeat: no-repeat;
+  padding: 45px 0 15px 0;
+  margin: 0 auto;
+}
+
+.skills__title{
+  width: 110px;
+  margin-bottom: 60px;
+  color: white;
+  border-color: white;
+  letter-spacing: 1.5px;
+
+  &:after{
+    background-color: white;
+  }
+}
+
+.icon-skills{
+  fill: #fff;
+}
+
+.skills__items{
+  @include list-reset();
+  width: 290px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills__item{
+  color: white;
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  min-width: 100px;
+  margin-bottom: 30px;
+}
+
+@include breakpoint(tablet){
+  .skills{
+    padding: 60px 0;
+  }
+
+  .skills__items{
+    width: 638px;
+  }
+
+  .skills__item{
+    position: relative;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    min-width: 165px;
+    padding-left: 50px;
+
+    &:after{
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/ok-mark.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
+
+@include breakpoint(desktop){
+  .skills{
+    background-position: -250px -50px;
+  }
+
+  .skills__title{
+    width: 140px;
+  }
+
+  .skills__items{
+    width: 800px;
+  }
+
+  .skills__item{
+    font-size: 18px;
+    line-height: 36px;
+    width: 230px;
+
+    &:after{
+      top: 2px;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+
+  .skills{
+    background-position: 0 0;
+  }
+
+}

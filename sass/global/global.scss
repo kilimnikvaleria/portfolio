@@ -1,0 +1,106 @@
+body {
+  font-family: 'Montserrat', "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  vertical-align:bottom;
+  //max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+.title {
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 40px;
+  padding-left: 90px;
+  text-transform: uppercase;
+
+  border: 2px solid black;
+  margin: 0 auto;
+  padding-top: 2px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 68px;
+    width: 1px;
+    height: 20px;
+    background-color: black;
+  }
+
+  @include breakpoint(desktop){
+    font-size: 24px;
+    line-height: 45px;
+
+    &:after{
+      height: 27px;
+    }
+  }
+}
+
+.title__icon{
+  position: absolute;
+
+  &--about{
+    top: 6px;
+    left: 18px;
+  }
+
+  &--skills{
+    top: 5px;
+    left: 18px;
+  }
+
+  &--education{
+    top: 0;
+    left: 12px;
+  }
+
+  &--portfolio{
+    top: 6px;
+    left: 18px;
+  }
+
+  @include breakpoint(desktop){
+    &--about{
+      top: 9px;
+    }
+
+    &--skills{
+      top: 8px;
+    }
+
+    &--education{
+      top: 0;
+      left: 22px;
+    }
+
+    &--portfolio{
+      top: 9px;
+      left: 18px;
+    }
+  }
+}

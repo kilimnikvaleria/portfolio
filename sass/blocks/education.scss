@@ -1,0 +1,161 @@
+.education{
+  @include container();
+  padding: 60px 15px 0 15px;
+}
+
+.education__title{
+  width: 160px;
+  margin-bottom: 70px;
+}
+
+.icon-education{
+  width: 42px;
+  height: 42px;
+}
+
+.education__item{
+  position: relative;
+  background-color: black;
+  padding: 50px 25px;
+  margin-bottom: 50px;
+}
+
+.education__subtitle{
+  position: absolute;
+  top: -20px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  font-size: 15px;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+
+  &--higher{
+    left: 108px;
+  }
+
+  &--courses{
+    left: 115px;
+  }
+
+  &--self-education{
+    left: 69px;
+  }
+}
+
+.education__text{
+  color: white;
+  font-size: 12px;
+  line-height: 34px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+@include breakpoint(tablet){
+
+  .education{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 60px 0 0 0;
+  }
+
+  .education__title {
+    margin: 0 257px 70px 257px;
+  }
+
+  .education__subtitle{
+
+    &--higher{
+      left: 130px;
+    }
+
+    &--courses{
+      left: 139px;
+    }
+
+    &--self-education{
+      left: 290px;
+    }
+  }
+
+  .education__item{
+    max-width: 314px;
+    padding: 45px 25px 20px 25px;
+
+    &--higher{
+      margin-right: 40px;
+    }
+
+    &--self-education{
+      max-width: 768px;
+      width: 768px;
+
+      br{
+        display: none;
+      }
+    }
+  }
+
+  .education__text{
+    font-size: 13px;
+  }
+}
+
+@include breakpoint(desktop){
+
+  .education{
+    padding-bottom: 80px;
+    padding-top: 90px;
+  }
+
+  .education__title{
+    width: 240px;
+    margin: 0 435px 100px;
+    text-align: center;
+
+    &:after{
+      content: "";
+      left: 87px;
+    }
+  }
+
+  .icon-education{
+    width: 48px;
+    height: 48px;
+  }
+
+  .education__subtitle{
+    &--higher {
+      left: 137px;
+    }
+
+    &--courses {
+      left: 144px;
+    }
+
+    &--self-education{
+      left: 99px;
+    }
+  }
+
+  .education__item{
+    max-width: 320px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    &--self-education{
+      margin-right: 0;
+    }
+  }
+
+  .education__text br{
+    display: block;
+  }
+}

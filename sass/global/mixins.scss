@@ -1,0 +1,32 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $point == desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+
+@mixin container(){
+  width: 320px;
+  margin: 0 auto;
+
+  @include breakpoint(tablet){
+    width: 768px;
+  }
+
+  @include breakpoint(desktop){
+    width: 1180px;
+  }
+}
